@@ -60,3 +60,18 @@ int main()
 	writefile();
 	return 0;
 }
+
+int findOtherAccount(char otherUsername[])
+{
+	Account *curP=head;
+	while(curP!=NULL)
+	{
+		if(strcmp(curP->username,otherUsername)==0)
+		{
+			otherAccount=curP;
+			return 1;
+		}
+		curP=curP->next;
+	} 
+	return 0;
+}
